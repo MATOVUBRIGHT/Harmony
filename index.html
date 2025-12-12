@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>Harmony Music School Management</title>
+    <meta name="description" content="Complete music school management system for tracking students, instruments, and finances" />
+    <meta name="author" content="Harmony Music School" />
+    <link rel="manifest" href="/manifest.json" />
+    <meta name="theme-color" content="#10b981" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+    <meta name="apple-mobile-web-app-title" content="Harmony" />
+    <link rel="apple-touch-icon" href="/placeholder.svg" />
+
+    <meta property="og:title" content="Harmony Music School Management" />
+    <meta property="og:description" content="Complete music school management system for tracking students, instruments, and finances" />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@lovable_dev" />
+    <meta name="twitter:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
+    <style> 
+      body #lovable-badge {
+        display: none !important;
+        visibility: hidden !important;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+    <script>
+      // Simple badge removal without hiding the body
+      (function() {
+        function removeBadge() {
+          var badge = document.getElementById('lovable-badge');
+          if (badge && badge.parentNode) {
+            badge.parentNode.removeChild(badge);
+          }
+        }
+        
+        // Try on load
+        document.addEventListener('DOMContentLoaded', removeBadge);
+        
+        // Try after short delay as fallback
+        setTimeout(removeBadge, 500);
+      })();
+    </script>
+  </body>
+</html>
